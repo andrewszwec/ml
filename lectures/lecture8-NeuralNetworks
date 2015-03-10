@@ -1,0 +1,181 @@
+neural networks:
+# video 1
+intro
+
+# video 2
+examples
+
+# video 3
+How to represent neural networks
+
+X0 always = 1
+
+g()= sigmoid activation function. 1/exp(theta'*X)
+
+sj+1 x (sj + 1) = dimension of matrix
+
+s1 = 2
+s2 = 4
+
+THETA(1) = s2 x (s1 + 1) = 4 x (2+1) = 4 x 2 [WRONG]
+
+Remember X0 
+
+THETA(1) = s2 x (s1 + 1) = 4 x (3+1) = 4 x 2 [CORRECT]
+
+
+# Video 4
+
+Z_1(2) the 2 means it is part of the hidden layer
+
+With the neural network essentially it is similar to a regression model with weights or parameters for each X value.
+
+THETA(1) = the 1 here means the input comes from the 1st layer. You then stick this straight into the sigmoid function which simulates an ON of OFF value
+
+Then you can make 
+
+H = g(THETA * a)
+
+z(2) = THETA(1).X or renaming = THETA(1).a(1)
+a(2) = g(z(2)) = sigmoid(z(2)) element wise
+
+x0 and a0 are bias unit = 1 that are not written
+
+z(3) = THETA(2) . a(2)
+h(x) = a(3) = g(z(3))
+
+THETA(1) is the weights for the input layer to hidden layer transformation.
+THETA(2) is the weights for the hidden layer to output layer transformation
+
+# Video 5
+h(x) = g( -30 + 20.x1 + 20.x2)
+
+## Example Equation:
+h(x) = g(-10 + 20.x1 + 20.x2)
+	 = g(-10 + 20.0 + 20.1 )
+
+This is a neural net:
+
+Truth Table:
+x1 x2	Result	g()
+0	0	-10 	approx(0)
+0	1 	10 		approx(1)
+1 	0 	10 		approx(1)
+1 	1 	30 		approx(1)
+
+Notice this is Logical OR
+
+This shows how neural networks can form logical AND and OR functions, from which you can make anything really.
+
+# Viedo 6
+non linear hypothesis
+
+To create a negation neural network you put a big negative number in front of the parameters
+
+## NOT x1
+h(x) = g( 10 -20.x1)
+
+## Create (NOT x1) and (NOT x2)
+
+h(x) = g(10 -20.x1 -20.x2)
+
+Truth Table:
+x1 x2	Result	g()
+0	0	10 		approx(1)
+0	1 	-10 	approx(0)
+1 	0 	-10 	approx(0)
+1 	1 	-30 	approx(0)
+
+
+LOGICAL OPERATOR NEURAL NETWORKS
+
+x1 AND x2
+h(x) = g(-30 + 20.x1 + 20.x2)
+
+(NOT x1) AND (NOT x2)
+h(x) = g(10 -20.x1 -20.x2)
+
+x1 OR x2
+h(x) = g(-10 + 20.x1 + 20.x2)
+
+PUTTING THEM TOGEHTER TO MAKE XNOR
+Use multiple nodes to create other types of logical operators. Use multiple things
+
+
+Use neutral networks to make features then put them into logistic regression algorithms to identify text
+
+# Vide0 7
+Multi Class Classification
+Different types of objects
+
+
+## Review Questions
+h(x) = g(10 -20.x1 -20.x2)
+
+Truth Table:
+x1 x2	Result	g()
+0	0	10 		approx(1)
+0	1 	-10 	approx(0)
+1 	0 	-10 	approx(0)
+1 	1 	-30 	approx(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

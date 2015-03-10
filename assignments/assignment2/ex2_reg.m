@@ -87,7 +87,7 @@ pause;
 initial_theta = zeros(size(X, 2), 1);
 
 % Set regularization parameter lambda to 1 (you should vary this)
-lambda = 1;
+lambda = 5;
 
 % Set Options
 options = optimset('GradObj', 'on', 'MaxIter', 400);
@@ -111,6 +111,8 @@ hold off;
 % Compute accuracy on our training set
 p = predict(theta, X);
 
+% This says, give me all the places where P is equal to y. It gives you a binary map of yes or no its equal
+%(p==y)
 fprintf('Train Accuracy: %f\n', mean(double(p == y)) * 100);
 
 

@@ -18,30 +18,18 @@ grad = zeros(size(theta));
 %               derivatives of the cost w.r.t. each parameter in theta
 
 %% Cost Function
-disp("\n Cost Function \n")
 H = sigmoid( X  * theta);
 S = sum( (-1 * log(H') * y) - ( (1-y)' * log(1-H) ) ) ;
-T = sum(theta(2:size(theta)(1),:).^2);
+T = sum(theta.^2);
 J = S / m + lambda/(2 * m) * T ;
 
 
+mask = ones(size(theta));
+mask(1) = 0;
 
-%% Gradient
-if(J==0){
-	H = sigmoid( X  * theta);
-	S = sum((H - y)'* X);
-	grad = S / (m);
-}
-else {
-
-	H = sigmoid( X  * theta);
-	S = sum((H - y)'* X);
-	grad = S / (m) + lambda/m * theta ;
-
-
-}
-endif
-
+H = sigmoid( X  * theta);
+S = X' * (H - y);
+grad = S / m + lambda/m * (theta .* mask);
 
 
 

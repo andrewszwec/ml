@@ -25,7 +25,7 @@ S = sum( (-1 * log(H') * y) - ( (1-y)' * log(1-H) ) ) ;
 J = S / m;
 
 H = sigmoid( X  * theta);
-S = sum((H - y)'* X);
+S = X' * (H - y);
 grad = S / (m);
 
 

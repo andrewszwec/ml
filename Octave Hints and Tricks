@@ -1,0 +1,32 @@
+Octave Hints and Tricks
+--------------------------
+Appending to a matrix
+
+Method 1
+X(end+1) = 12;
+
+Method 2
+X = [ X ; somethingNew ]
+
+Matrix Multiplication:
+%% The secret was to use element wise matrix multiplication instead of transpose matrices
+%% matrix element wise multiplication is sort of like using SQL to multiply data sets in that each element in each row is multiplied by each other element in each other row
+Try this:
+
+a = [1;2;3;4;5;6;7;8;9;10]
+
+r = a * a'
+size(r)
+%% 10 x 10 matrix
+
+r = a .* a
+size(r)
+%% 10 x 1 matrix
+
+Count Number of Occurances of each value in a matrix
+
+[a,b]=hist(x,unique(x))
+
+(	sort of like 
+	select myvar, count(*) from table group by myvar 
+)
