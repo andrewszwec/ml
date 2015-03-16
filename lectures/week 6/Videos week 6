@@ -51,50 +51,6 @@ Video 7
 -------
 
 
-video 9
--------
-Error analysis:
-get a quick and dirty solution going . then do error analysis.
-plot learning curves to decide what to do next
-
-(porter stemmer: for natural langauge processing)
-
-video 10
-skewed classes. There are more non responders than responders
-
-
-precision recall:
-- is like a confusion matrix
-- precision = number true positives/#predicted positive = true pos / (true pos + fake pos)
-- True positives / #actual positives = true pos / (true pos + false neg)
--
-
-				Actual
-				1 			0
-predicted	1 	40			7
-			0	3 			50
-
-Precision 	= 40 / (40+7) = 85%
-recall 		= 40 / (40 + 3) = 93%
-
-y=1 for the rare class.
-
-Video 11
----------
-F score:
-
-F = 2(PR)/(P+R)
-
-Video 12
----------
-How much data to train on??
-neural net with many hidden units ~ to regression with my features
-
-can a human expert use the features to predict y?
-more data may help. If human cant do it then more data probably wont help.
-
-
-
 
 
 
