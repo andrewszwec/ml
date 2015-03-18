@@ -11,7 +11,7 @@ function pred = svmPredict(model, X)
 % need to do prediction for a single example
 if (size(X, 2) == 1)
     % Examples should be in rows
-    X = X';
+    X = X'; %
 end
 
 % Dataset 
