@@ -97,6 +97,27 @@ while ~isempty(email_contents)
     %       str2). It will return 1 only if the two strings are equivalent.
     %
 
+    % Step 1:
+    % Look up word in vocab list (we are only looking for one of 1899 common words, typically this can be 10,000 - 50,000)
+
+    vocabList == str 
+
+    % Get the minimum error in the error col
+min_error_cv = min( details(:,3) );
+% make a bit mask that tells you where the min value is
+idx = ( details(:,3) == min_error_cv );
+
+% store the entire row in a vector
+C_sigma_err = details(idx,:);
+
+
+    
+
+    % Step 2:
+    % If word exists add indice to word_indices
+
+    % Step 3:
+    % 
 
 
 
