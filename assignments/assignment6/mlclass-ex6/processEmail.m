@@ -100,34 +100,15 @@ while ~isempty(email_contents)
     % Step 1:
     % Look up word in vocab list (we are only looking for one of 1899 common words, typically this can be 10,000 - 50,000)
 
-    vocabList == str 
-
-    % Get the minimum error in the error col
-min_error_cv = min( details(:,3) );
-% make a bit mask that tells you where the min value is
-idx = ( details(:,3) == min_error_cv );
-
-% store the entire row in a vector
-C_sigma_err = details(idx,:);
-
-
+    for k = 1 : length(vocabList)
+        if ( strcmp(str, vocabList{k}) == 1 )
+            word_indices(end+1) = k
+        endif
+    end
     
 
-    % Step 2:
-    % If word exists add indice to word_indices
 
-    % Step 3:
-    % 
-
-
-
-
-
-
-
-
-
-    % =============================================================
+   % =============================================================
 
 
     % Print to screen, ensuring that the output lines are not too long
