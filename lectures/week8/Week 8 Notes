@@ -31,6 +31,157 @@ initialise K means multiple times to get best local minima
 
 Run k means about 50-100 times
 
+Video 5 (Choosing the number of clusters)
+------------------------------------------
+Elbow method::
+Do a chart Cost vs number of clusters
+Look for an elbow. A point where the curve quickly changes.
+
+
+Programming exercise: Image compression by k-means clustering
+
+
+Video 5 (Data compression 1)
+------------------------------------------
+Dimensionality reduction
+
+
+
+Video 6 (Data compression 2)
+------------------------------------------
+Data visualisation
+
+flatten the data so you can look at it on an x,y plane
+
+Country 	| 	z1 	| 	z2
+------------------------------------------
+			|		|
+
+Take a 50 dimensional set and turn it into 2 dimensions.
+
+
+Video 7 PCA
+------------------------------------------
+PCA - principle component analysis
+
+With PCA you dont know what the features are that it returns. It compresses the data from many columns into 1. But it does it by projecting some sets of data on a plane by using the smallest error between the points and the plane. 
+
+
+
+
+Video 8 PCA
+------------------------------------------
+PCA - principle component analysis
+
+preprocessing involves feature scaling and mean normalisation
+
+Mean normalisation = Xj - mu_j
+
+where mu_j = 1/m * sum(X)
+
+Feature scaling::
+
+Xj = (xj - uj) / sj
+
+where sj = range of data
+
+
+PCA Algorithm:
+---------------
+
+sigma = 1/m * sum(X * X') these are the same!
+sigma = (1/m) * X' * X
+
+compute eigen vectors
+
+[U, S, V] = svd(sigma); -- singular value decomposition (n x n matrix)
+
+Require the U matrix:
+Take the first K columns from the U matrix to reduce the data to K dimensions = U_reduce
+
+Ureduce = U(:, 1:k)
+
+z = U_reduce' * X;
+
+
+Video 9 PCA
+------------------------------------------
+chosing the number of principle components (k)
+
+try k =1 ,2,..., n
+
+1-sum(S(k))/sum(S(n)) >= 0.99
+
+
+Video 9 reconstructing from compressed data
+------------------------------------------
+
+
+
+Video 10 - Advice for applying PCA
+------------------------------------------
+speeding up learning algorithm
+
+Xi is 10,000 dimensional
+
+(for R do PCA on data first then use R)
+
+reduce 10,000 dim to 1,000 dim
+
+where (Z, y) instead of (X, y)
+
+Dont use PCA for over fitting - use regularisation instead
+
+only use PCA if it doesnt work without it
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
