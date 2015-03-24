@@ -1,4 +1,5 @@
 video 2
+------------------------------------
 K Means algorithm
 1. Cluster assignment step based on distance to centroid of red and blue group
 2. Move the centroid based on the average x and y of the cluster (each red or blue cluster). and re-assign clusters based on distance to cluster centroid
@@ -8,11 +9,30 @@ How to choose K:
 
 
 
-Video 3/4 - Optimisation Objective
+Video 3 - Optimisation Objective
 ------------------------------------
 
 c(i) = the cluster index
 mu_k = cluster of centroid K
 mu_c(i) = centroid of cluster that i belongs to
+
+
+Video 4 (Random Initialisation)
+------------------------------------
+K < m
+
+randomly pick K training examples
+
+choose 2 points as the starting centroids
+
+how to avoid K means getting stuck at local minima
+
+initialise K means multiple times to get best local minima
+
+Run k means about 50-100 times
+
+
+
+
 
 
