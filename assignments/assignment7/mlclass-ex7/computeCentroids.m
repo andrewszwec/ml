@@ -27,12 +27,15 @@ centroids = zeros(K, n);
 %
 
 
+% look at all centroids
+for k = 1:K
+	%for nn = 1:n
+		
+		centroids(k,:) = mean(X(idx(:)==k,:));
 
 
-
-
-
-
+	%end
+end
 % =============================================================
 
 
