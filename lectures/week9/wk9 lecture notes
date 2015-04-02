@@ -1,0 +1,244 @@
+Week 9
+-------
+--------
+
+Video 1
+--------
+Anomoly Detection: (flags things because they stand out from the rest of the crowd)
+applications, fraud detection, aircraft engines, monitoring data centre pc's
+
+Identify outliers to do an action to  them, can you send them a marketing campaign?
+
+Video 2
+--------
+gaussian distribution
+
+Video 3
+-------
+p(x) = p(x1; mu1, sigma^2) * p(x2) * p(x3) *.... * P(x_n)
+
+symbolised by the big product equation
+
+see screen shot for anomoly detection algorithm
+
+Video 4
+--------
+evaluating anomoly detection software
+
+10,000 good engines and 
+2-50 faulty
+
+Splitting up data
+---------------------
+training set = 6000
+CV = 2000 + 10 anomolies
+TEST = 2000 + 10 anomolies
+
+Evaluation Metrics
+- compute precision/recall
+- F1 score
+
+Use CV set to choose epsilon
+
+Video 5
+-----------
+When to use different sorts of algorithms
+
+ANOMOLY DETECTION:
+Used to predict unlikely events. 
+i.e number of examples large, but number of anomolies is tiny.
+
+SUPERVISED LEARNING:
+large number of positive and negative examples
+
+
+Anomoly detection can be used to detect a number of power plants playing up
+
+
+Video 6 
+-------
+Choosing features for AnDetect
+ 
+chose gaussian features - check using hist()
+or transform the features with log(x) if the data is skewed. This usually makes it gaussian.
+
+Menu of things you can do to make you data gaussian:
+1. log(x)
+2. log(x+C)
+3. x^(1/2)
+4. x^(1/3)
+
+
+Make new derived features by doing x1/x2 or x1^2/x2 etc...
+
+Video 7
+----------
+Multivariate Gaussian distb
+
+all probs at the same time
+
+the special multivariate
+
+Video 8
+-------
+AnDet using Multi variate gaussian distbn
+
+When to use:
+
+
+
+Original Model
+=================
+1. requires manually creating strange combinations of features.
+
+2. Computationally cheaper
+
+3. works on small training sets
+
+
+Multivariate Gaussian
+=======================
+1. Automattically captures correlations between features
+
+2. computationaly expensive
+
+3. must have m >> n
+
+4. requires many more records than columns
+
+
+non-invertible then make sure m >> n
+
+Video 9
+--------
+Recommender Systems
+
+some algorithms try and learn what are good features
+
+Video 10
+--------
+Recommender systems
+
+Ex.1 look at Carol
+X = [1 ; 1.0 ; 0.01]
+theta = [0 ; 0 ; 5]
+
+theta' * X
+
+Video 11
+---------
+Collaborative Filtering
+
+X = [0;0.5]
+theta1 = [0; 0]
+theta2 = [0; 3]
+theta3 = [0; 5]
+
+theta1' * X
+theta2' * X
+theta3' * X
+
+All the users will be helping each other to make better user predictions. you guess theta, then optimise X, then optimise theta for you new X and so on.
+
+
+
+Video 12   (Collaborative Filtering Algorithm)
+-----------------------------------------------------
+Massive optimisation objective
+
+see desktp images
+
+
+Video 13 (Vectorisation: low rank matrix factoriszation)
+----------------------------------------
+predicted ratings = X * THETA'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
