@@ -40,19 +40,32 @@ Theta_grad = zeros(size(Theta));
 %                     partial derivatives w.r.t. to each element of Theta
 %
 
+% % Find the cost function (Unregularised)
+% 	% movies on rows and users on cols
+% J = 1/2 .* sum(  sum(  R .* ( (X * Theta' .-  Y ).^2 ) )  );
+
+% % Find the Gradients
+% 	% Gradient X first (5 x 3 matrix)
+% 		% Remember to times through by R to zero out the records where the users has not responded
+
+% X_grad =  R .* (X * Theta' .- Y) * Theta ;
+
+% 	% Gradient Theta (4 x 3)
+% Theta_grad =  (R .* (X * Theta' .- Y) )' * X ;
 
 
+ 
+% Find the cost function (Regularised)
+J1 = 1/2 .* sum(  sum(  R .* ( (X * Theta' .-  Y ).^2 ) )  );
+J2 = lambda/2 * sum( sum( Theta.^2 ) );
+J3 = lambda/2 * sum( sum( X.^2 ) );
 
+J = J1 + J2 + J3;
 
+% Find the Gradients
+X_grad =  (R .* (X * Theta' .- Y) * Theta) + (lambda .* X);
 
-
-
-
-
-
-
-
-
+Theta_grad =  ((R .* (X * Theta' .- Y) )' * X) + (lambda .* Theta);
 
 
 % =============================================================
