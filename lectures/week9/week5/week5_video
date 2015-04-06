@@ -1,0 +1,39 @@
+Gradient Checking
+============================
+You can numerically estimate the partial derivatvie of a function by doing
+
+d/d_theta1 J(theta) = ( J(theta1+epsilon, theta2 +....+ theta_n) - J(theta1-epsilon, theta2 ,...., theta_n) ) / (2*epsilon)
+
+You can then just move the J(theta+epsilon) through the other partial derivatives until you calculate them all. eg.
+
+d/d_theta1 
+d/d_theta2 = ( J(theta1, theta2+epsilon ,...., theta_n) - J(theta1, theta2-epsilon ,...., theta_n) ) / (2*epsilon)
+...
+d/d_theta_n = ( J(theta1, theta2 ,...., theta_n + epsilon) - J(theta1, theta2,...., theta_n-epsilon) ) / (2*epsilon)
+
+
+(SEE SCREEN SHOT OF FOR LOOP ALGORITHM FOR IMPLEMENTATION OF gradApprox).
+
+Also see screen shot for order of implementation of the back prop algorithm.
+
+Random Initialisation
+============================
+Code to randomly initialise Theta for neural networks to break symmetry.
+
+All the thetas must be different other wise symmetry is not broken!
+
+
+Putting it all together
+============================
+6 steps of training NN (see screenshot)
+1. Rand() init weights theta
+2. implement forward prop to get hx for all X
+3. compute J(theta)
+4. implement back prop to get d/d_theta J(theta)
+5. use grad checking to compare back prop grad to numerically calc'd grad
+6. use optimisation like fminunc to minimise J(theta) 
+
+
+
+
+
