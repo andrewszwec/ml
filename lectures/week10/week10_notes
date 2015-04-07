@@ -1,0 +1,86 @@
+========================================
+Week 10
+========================================
+
+----------------------------------------
+Video 1 (Batch gradient descent)
+----------------------------------------
+-
+
+----------------------------------------
+Video 2 (stochastic gradient descent)
+----------------------------------------
+
+Use stochastic gradient descent to practically implement gradient descent for linear regression on very large datasets. m = 100,000,000
+
+THis algorithm means you do not have to scan over the entire training set to create your cost function, meaning it is much faster than normal Grad Desc.
+
+The process of stochastic gradient descent, intead of finding the global minima of an equation by taking all training examples at once, takes each training example one at a time and makes a new estimation for each iteration.
+
+This means the algorithm can sometimes wander around the global minima and it never settles at a point, which means you need to stop it a set number of iterations. 
+
+For all practical intents and purposes this approximation to the global minima is ok.
+
+----------------------------------------
+Video 3 (Mini Batch gradient descent)
+----------------------------------------
+THis is somewhere in between stochastic gradient descent and batch gradient descent.
+It can sometimes be faster than stochastic.
+
+(See screen shot for algorithm)
+
+ Is faster than stochastic descent if you have a good vectoriser implementation. THis is because you can partly parallelise some of your computations by using matrix calculations instead of proceedural calcs.
+
+use values of b = 2 to 100 for the batch size
+
+----------------------------------------
+Video 4 (stochastic gradient descent convergence)
+----------------------------------------
+how do you know stochastic Grad Desc is working?
+
+every 1000 example take the average cost and plot it against number of iterations.
+
+Try different learning rates. Smaller learning rates might allow the algorithm to converge to a better result, since it uses smaller steps.
+
+Average over 5000 examples gives you a smoother convergence.
+
+If the learning curve is flat then your algorithm isnt learning much from the data. Change your algorithm by adding more features or add more data. Or change the learning rate.
+
+If you want your Stochastic Gr Desc to converge to the global minima more accurately you can make the learning rate smaller the closer you get to the global minima using this formula. This can mean extra work to tune the constants.
+
+alpha = const1 / (iterationNumber + const2)
+
+(see screenshot 9:52PM 7/4/2015)
+
+
+----------------------------------------
+Video 5 ( Online Learning )
+----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
