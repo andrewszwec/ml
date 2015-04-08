@@ -56,11 +56,86 @@ alpha = const1 / (iterationNumber + const2)
 ----------------------------------------
 Video 5 ( Online Learning )
 ----------------------------------------
+trains models using a continuous stream of data that is flooding in. Eg. like users coming in all the time.
+
+Just train on 1 sample at a time and throw away each sample after you do this. 
+
+THis only works if you have a large flood of data.
+
+The continuous stream of data trains the parameters theta. 
+
+Slowly changing user prefences will automatically change the weighting of the parameters and be built in.
+
+
+It can adapt to changing user tastes 
+
+
+---------------------------------------------
+Video 6 ( Map Reduce and Data Parallelism )
+---------------------------------------------
+1. split the data up amongst your cpu nodes
+2. split the calculation for gradient descent across you nodes. Each node does 1...100, 101....200, 201...300, etc...
+
+split training set across multiple cores in your PC.
+
+Some vectorisation algorithms take care of parallelising across different cores.
 
 
 
+========================================
+Application Example Photo OCR
+========================================
+
+---------------------------------------------
+Video 1 ( Problem Description and Pipeline )
+---------------------------------------------
+case study: OCR of text in images
 
 
+machine learning pipeline:
+
+image -> text detection -> character segementation -> character recognition
+
+
+---------------------------------------------
+Video 2 ( Getting lots of data and artificial data )
+---------------------------------------------
+artifical data synthesis
+
+cite: adam coates and tao wang
+
+1. take computer font
+2. apply distortion/ shearing / scaling / blurring
+3. apply rotation
+4. apply random background
+5. apply warping
+
+Take someone talking then overlay this onto many other background sounds like machinery.
+
+Plot learning curves before expending effort!
+
+You need to have a low bias classifier before you invest time in anything else. eg data!
+
+How much work is it to get 10x as much data?
+
+1. Artificial data sysnthesis
+2. Collect data and label it yourself
+3. "Crowd source" data labelling! Amazon mechanical turk
+
+
+---------------------------------------------
+Video 2 ( Ceiling Analysis: What part of the pipeline to work on next )
+---------------------------------------------
+
+OCR Pipeline:
+
+image -> text detection -> character segementation -> character recognition
+
+(see desktop image 8/4/2015 9:50pm)
+
+substitute parts of the system with the perfect case to simulate how good parts of it could get. Now see what the overall accuracy improves to.
+
+Do this for all parts of the system and find out when the biggest gains in accuracy occur.
 
 
 
